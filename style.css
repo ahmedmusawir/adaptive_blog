@@ -1,0 +1,211 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ul,
+ol,
+li {
+  list-style-type: none;
+}
+input,
+textarea,
+select {
+  outline: none;
+}
+/*=======================================
+=            UTILITY CLASSES            =
+=======================================*/
+.align-center {
+  text-align: center;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.inline li {
+  display: inline-block;
+  margin-right: 24px;
+}
+.inline:last-child {
+  margin-right: 0;
+}
+.narrow-p {
+  margin: 0 auto 1.5em;
+  width: 50%;
+}
+.hidden {
+  opacity: .2;
+  filter: alpha(opacity=20);
+  -webkit-transition: opacity 0.8s ease-out;
+  -o-transition: opacity 0.8s ease-out;
+  -moz-transition: opacity 0.8s ease-out;
+  -ms-transition: opacity 0.8s ease-out;
+  transition: opacity 0.8s ease-out;
+}
+/**
+*
+* LESS VARIABLES
+*
+**/
+/*===================================
+=            LESS MIXINS            =
+===================================*/
+/*-----  End of LESS MIXINS  ------*/
+/*=========================================
+=            UI ELEMENT STYLES            =
+=========================================*/
+.fancy-hr {
+  background-color: #dcdbdb;
+  background-image: -webkit-linear-gradient(left, #ffffff 0%, #dcdbdb 50%, #ffffff 100%);
+  background-image: -o-linear-gradient(left, #ffffff 0%, #dcdbdb 50%, #ffffff 100%);
+  background-image: -moz-linear-gradient(left, #ffffff 0%, #dcdbdb 50%, #ffffff 100%);
+  background-image: -ms-linear-gradient(left, #ffffff 0%, #dcdbdb 50%, #ffffff 100%);
+  background-image: linear-gradient(left, #ffffff 0%, #dcdbdb 50%, #ffffff 100%);
+  border: none;
+  height: 1px;
+  margin: 1.5em auto;
+  width: 50%;
+}
+.fancy-hr.no-margin {
+  margin: 0 auto;
+}
+.fancy-hr.alt {
+  background: white;
+  border-top: 1px solid #dcdbdb;
+  border-bottom: 1px solid #dcdbdb;
+  height: 5px;
+  width: 120px;
+}
