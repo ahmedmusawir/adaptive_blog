@@ -194,9 +194,9 @@ select {
 	background-image: linear-gradient(left, white 0%, @border 50%, white 100%);
 
 	border: none;
-	height: 2px;
-	margin: 1.5em auto;
-	width: 50%;
+	height: 3px;
+	margin: 3em auto;
+	width: 70%;
 
 	&.no-margin {
 		margin: 0 auto;
@@ -211,11 +211,19 @@ select {
 	}
 }
 
-/**
-*
-* GENERAL
-*
-**/
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+
+	}
+}
+
+
+/*===============================
+=            GENERAL            =
+===============================*/
+
 body {
 	font: 14px/21px @body-font;
 	color: @text-color;
@@ -237,6 +245,15 @@ hr {
 	height: 1px;
 	border-top: 1px solid lighten(@border-color, 5%);
 	margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+	color: @dark-color;
+}
+
+h1 {
+	font-size: 32px;
+	font-family: @heading-font;
 }
 
 /*==============================
@@ -265,7 +282,7 @@ hr {
 
 			a {
 				color: @light-text-color;
-				text-decoration: none;
+				// text-decoration: none;
 				display: inline;
 				font-size: 14px;
 				height: 42px;
@@ -379,7 +396,7 @@ hr {
 
 		a {
 			color: @dark-color;
-			text-decoration: none;
+			// text-decoration: none;
 			font-weight: bold;
 			height: 6em;
 			line-height: 3.5em;
@@ -411,7 +428,7 @@ hr {
 			filter: alpha(opacity=0);
 			visibility: hidden;
 
-			.transition(opacity, 1s);
+			.transition(opacity, .5s);
 
 			li {
 				float: none;
@@ -452,7 +469,6 @@ hr {
 		&:hover > a {
 			color: #428bca;
 			font-weight: bold;
-			// color: orange;
 		}
 	}
 }
@@ -470,7 +486,7 @@ hr {
 
 	background: white;
 	// border: 1px solid @border-color;
-	box-shadow: inset 8px 0px 8px grey, 0px 0px 15px @dark-color;
+	box-shadow: inset 3px 0px 3px grey, 0px 0px 15px @dark-color;
 
 
 	article {
@@ -488,9 +504,118 @@ hr {
 				line-height: 42px;
 			}
 		}
+
+		h1 a {
+			color: lighten(@dark-color, 30%);
+
+			&:hover {
+				color: @link-color;
+			}
+		}
+
+		.article-meta-extra {
+			font-size: 12px;
+			color: @light-text-color;
+			height: 21px;
+			line-height: 21px;
+			font-style: italic;
+
+			a {
+				font-weight: normal;
+			}
+		}
+
+		h1 + .article-meta-extra {
+			height: 42px;
+			line-height: 42px;
+		}
+
+		.article-meta-comments {
+			float: right;
+			background: transparent url('images/comments-base-out.png') center center no-repeat;
+			width: 70px;
+			height: 70px;
+			color: white;
+			text-align: center;
+			padding-top: 25px;
+			margin-top: 42px;
+
+			&:hover {
+				background: transparent url('images/comments-base-over.png') center center no-repeat;
+
+			}
+
+		}
+
+		.article-preview-image {
+			float: left;
+			margin-right: 2em;
+
+			img {
+				border: 1px solid @border-color;
+				.box-shadow(5px, 5px, 6px, @border-color);
+			}
+		}
+	} 
+	//end article tag
+	
+	.post-format-quote {
+		float: right;
+		width: 42px;
+		height: 42px;
+		background: transparent url('images/icons/quote-format-icon.png') center center no-repeat;
+		margin-top: 15px;
 	}
 
-}
+	.quote-container {
+		background: @bevel-color;
+		border: 1px solid @border-color;
+		.box-shadow(0px, 0px, 5px, @border-color);
+		text-align: center;
+		padding: 3em;
+
+		blockquote {
+			font: 21px @serif-font;
+			color: @dark-color;
+			font-style: italic;
+		}
+
+		cite {
+			margin-top: 1.5em;
+			display: block;
+		}
+	}
+
+	.post-format-url {
+		float: right;
+		width: 42px;
+		height: 42px;
+		background: transparent url('images/icons/link-format-icon.png');
+		margin-top: 15px;
+	}
+
+	.url-container {
+		background: @bevel-color;
+		border: 1px solid @border-color;
+		.box-shadow(0px, 0px, 5px, @border-color);
+		text-align: center;
+		padding: 3em;
+
+		p {
+			font-size: 21px;
+			color: @dark-color;
+		}
+
+		span {
+			margin-top: 1.5em;
+			display: block;
+		}
+	}
+	
+
+} //end .articles class
+
+
 
 	
 

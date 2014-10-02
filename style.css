@@ -195,9 +195,9 @@ select {
   background-image: -ms-linear-gradient(left, #ffffff 0%, #dcdbdb 50%, #ffffff 100%);
   background-image: linear-gradient(left, #ffffff 0%, #dcdbdb 50%, #ffffff 100%);
   border: none;
-  height: 2px;
-  margin: 1.5em auto;
-  width: 50%;
+  height: 3px;
+  margin: 3em auto;
+  width: 70%;
 }
 .fancy-hr.no-margin {
   margin: 0 auto;
@@ -209,11 +209,15 @@ select {
   height: 5px;
   width: 120px;
 }
-/**
-*
-* GENERAL
-*
-**/
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+/*===============================
+=            GENERAL            =
+===============================*/
 body {
   font: 14px/21px "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #5b5b5b;
@@ -232,6 +236,17 @@ hr {
   height: 1px;
   border-top: 1px solid #e4e4e4;
   margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #2b3039;
+}
+h1 {
+  font-size: 32px;
+  font-family: "Bree Serif", Arial, sans-serif;
 }
 /*==============================
 =            HEADER            =
@@ -255,7 +270,6 @@ hr {
 }
 .top-menu-container .top-menu-navigation ul > li a {
   color: #c9c9c9;
-  text-decoration: none;
   display: inline;
   font-size: 14px;
   height: 42px;
@@ -346,7 +360,6 @@ hr {
 }
 .main-navigation ul > li a {
   color: #2b3039;
-  text-decoration: none;
   font-weight: bold;
   height: 6em;
   line-height: 3.5em;
@@ -372,11 +385,11 @@ hr {
   opacity: 0;
   filter: alpha(opacity=0);
   visibility: hidden;
-  -webkit-transition: opacity 1s ease-out;
-  -o-transition: opacity 1s ease-out;
-  -moz-transition: opacity 1s ease-out;
-  -ms-transition: opacity 1s ease-out;
-  transition: opacity 1s ease-out;
+  -webkit-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
 }
 .main-navigation ul > li ul li {
   float: none;
@@ -424,7 +437,7 @@ hr {
 }
 .articles {
   background: white;
-  box-shadow: inset 8px 0px 8px #808080, 0px 0px 15px #2b3039;
+  box-shadow: inset 3px 0px 3px #808080, 0px 0px 15px #2b3039;
 }
 .articles article {
   padding: 1em 3em;
@@ -439,4 +452,93 @@ hr {
   font-weight: normal;
   height: 42px;
   line-height: 42px;
+}
+.articles article h1 a {
+  color: #6d7990;
+}
+.articles article h1 a:hover {
+  color: #4599c8;
+}
+.articles article .article-meta-extra {
+  font-size: 12px;
+  color: #c9c9c9;
+  height: 21px;
+  line-height: 21px;
+  font-style: italic;
+}
+.articles article .article-meta-extra a {
+  font-weight: normal;
+}
+.articles article h1 + .article-meta-extra {
+  height: 42px;
+  line-height: 42px;
+}
+.articles article .article-meta-comments {
+  float: right;
+  background: transparent url('images/comments-base-out.png') center center no-repeat;
+  width: 70px;
+  height: 70px;
+  color: white;
+  text-align: center;
+  padding-top: 25px;
+  margin-top: 42px;
+}
+.articles article .article-meta-comments:hover {
+  background: transparent url('images/comments-base-over.png') center center no-repeat;
+}
+.articles article .article-preview-image {
+  float: left;
+  margin-right: 2em;
+}
+.articles article .article-preview-image img {
+  border: 1px solid #d7d7d7;
+  -webkit-box-shadow: 5px 5px 6px #d7d7d7;
+  box-shadow: 5px 5px 6px #d7d7d7;
+}
+.articles .post-format-quote {
+  float: right;
+  width: 42px;
+  height: 42px;
+  background: transparent url('images/icons/quote-format-icon.png') center center no-repeat;
+  margin-top: 15px;
+}
+.articles .quote-container {
+  background: #fafafa;
+  border: 1px solid #d7d7d7;
+  -webkit-box-shadow: 0px 0px 5px #d7d7d7;
+  box-shadow: 0px 0px 5px #d7d7d7;
+  text-align: center;
+  padding: 3em;
+}
+.articles .quote-container blockquote {
+  font: 21px Georgia, serif;
+  color: #2b3039;
+  font-style: italic;
+}
+.articles .quote-container cite {
+  margin-top: 1.5em;
+  display: block;
+}
+.articles .post-format-url {
+  float: right;
+  width: 42px;
+  height: 42px;
+  background: transparent url('images/icons/link-format-icon.png');
+  margin-top: 15px;
+}
+.articles .url-container {
+  background: #fafafa;
+  border: 1px solid #d7d7d7;
+  -webkit-box-shadow: 0px 0px 5px #d7d7d7;
+  box-shadow: 0px 0px 5px #d7d7d7;
+  text-align: center;
+  padding: 3em;
+}
+.articles .url-container p {
+  font-size: 21px;
+  color: #2b3039;
+}
+.articles .url-container span {
+  margin-top: 1.5em;
+  display: block;
 }
