@@ -240,7 +240,7 @@ hr {
   background: white;
   border-bottom: 1px solid #d7d7d7;
   box-shadow: inset 0px -5px 0px #fafafa, 0px 0px 5px #d7d7d7;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
 }
 .top-menu-container {
   background: #2b3039;
@@ -341,13 +341,15 @@ hr {
 ================================*/
 .main-navigation ul > li {
   float: left;
+  position: relative;
+  z-index: 999;
 }
 .main-navigation ul > li a {
   color: #2b3039;
   text-decoration: none;
   font-weight: bold;
   height: 6em;
-  line-height: 6em;
+  line-height: 3.5em;
   margin-right: 1em;
   position: relative;
   padding-right: 1em;
@@ -363,5 +365,78 @@ hr {
   color: #969696;
 }
 .main-navigation ul > li ul {
-  display: none;
+  position: absolute;
+  background: white;
+  left: -1em;
+  border: 1px solid #d7d7d7;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  visibility: hidden;
+  -webkit-transition: opacity 1s ease-out;
+  -o-transition: opacity 1s ease-out;
+  -moz-transition: opacity 1s ease-out;
+  -ms-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+}
+.main-navigation ul > li ul li {
+  float: none;
+  white-space: nowrap;
+  padding: 0 1em;
+  border-bottom: 1px solid #c4c9d2;
+}
+.main-navigation ul > li ul li a {
+  font-weight: normal;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.main-navigation ul > li ul li a::before {
+  content: '';
+}
+.main-navigation ul > li ul li ul {
+  left: 100%;
+  top: -1px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  visibility: hidden;
+  -webkit-transition: opacity 1s ease-out;
+  -o-transition: opacity 1s ease-out;
+  -moz-transition: opacity 1s ease-out;
+  -ms-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+}
+.main-navigation ul > li:hover > ul {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  visibility: visible;
+}
+.main-navigation ul > li:hover > a {
+  color: #428bca;
+  font-weight: bold;
+}
+/*====================================
+=            MAIN CONTENT            =
+====================================*/
+.main-content {
+  padding: 1em;
+}
+.articles {
+  background: white;
+  box-shadow: inset 8px 0px 8px #808080, 0px 0px 15px #2b3039;
+}
+.articles article {
+  padding: 1em 3em;
+}
+.articles article .article-meta-categories {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.articles article .article-meta-categories a {
+  color: #c9c9c9;
+  text-decoration: none;
+  font-weight: normal;
+  height: 42px;
+  line-height: 42px;
 }
