@@ -175,15 +175,15 @@ select {
   -ms-transition: opacity 0.8s ease-out;
   transition: opacity 0.8s ease-out;
 }
+/*===================================
+=            LESS MIXINS            =
+===================================*/
+/*-----  End of LESS MIXINS  ------*/
 /**
 *
 * LESS VARIABLES
 *
 **/
-/*===================================
-=            LESS MIXINS            =
-===================================*/
-/*-----  End of LESS MIXINS  ------*/
 /*=========================================
 =            UI ELEMENT STYLES            =
 =========================================*/
@@ -195,7 +195,7 @@ select {
   background-image: -ms-linear-gradient(left, #ffffff 0%, #dcdbdb 50%, #ffffff 100%);
   background-image: linear-gradient(left, #ffffff 0%, #dcdbdb 50%, #ffffff 100%);
   border: none;
-  height: 1px;
+  height: 2px;
   margin: 1.5em auto;
   width: 50%;
 }
@@ -208,4 +208,88 @@ select {
   border-bottom: 1px solid #dcdbdb;
   height: 5px;
   width: 120px;
+}
+/**
+*
+* GENERAL
+*
+**/
+body {
+  font: 14px/21px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #5b5b5b;
+  background: transparent url('images/main-bg.jpg') 0 0;
+}
+p,
+ul,
+ol {
+  margin-bottom: 1em;
+}
+p a {
+  color: #4599c8;
+  font-weight: bold;
+}
+hr {
+  border: none;
+  height: 1px;
+  border-top: 1px solid #e4e4e4;
+  margin: 0;
+}
+/*==============================
+=            HEADER            =
+==============================*/
+.main-header {
+  background: white;
+  border-bottom: 1px solid #d7d7d7;
+  box-shadow: inset 0px -5px 0px #fafafa, 0px 0px 5px #d7d7d7;
+  margin-bottom: 3em;
+}
+.top-menu-container {
+  background: #2b3039;
+  margin-bottom: 1.5em;
+}
+.top-menu-container .top-menu-navigation ul {
+  margin-top: -1em;
+}
+.top-menu-container .top-menu-navigation ul > li {
+  float: left;
+}
+.top-menu-container .top-menu-navigation ul a {
+  color: #c9c9c9;
+  text-decoration: none;
+  display: inline;
+  font-size: 14px;
+  height: 42px;
+  line-height: 42px;
+  margin-right: 1em;
+  position: relative;
+  padding-right: 1em;
+}
+.top-menu-container .top-menu-navigation ul a:hover {
+  color: orange;
+}
+.top-menu-container .top-menu-navigation ul a::before {
+  content: '|';
+  position: absolute;
+  font-size: 12px;
+  right: 0;
+  top: -15px;
+  color: #7d7d7d;
+}
+.top-menu-container .top-menu-navigation ul ul {
+  display: none;
+}
+.logo-container {
+  padding-bottom: 1.5em;
+}
+.ad-block {
+  -webkit-box-shadow: 0px 0px 5px #d7d7d7;
+  box-shadow: 0px 0px 5px #d7d7d7;
+}
+.ad-block img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.top-ad {
+  margin-bottom: 3px;
 }

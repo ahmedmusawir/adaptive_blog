@@ -104,23 +104,6 @@ select {
 	.transition(opacity, .8s);
 }
 
-/**
-*
-* LESS VARIABLES
-*
-**/
-
-@regular-text: 	#2B2B2B; 	//Regular text
-@primary: 		#E34E47; 	//Link and primary button 
-@light-text: 	#7A7A7A;	//light text 
-@light-bg: 		#F7F7F7;	//Very light BG 
-@error: 		#D7262F;	//Error 
-@border: 		#DCDBDB;	//Border color 
-@dark-bg: 		#1A2128; 	//Dark BG 
-@dark-bg-text: 	#687078; 	//Text on Dark BG 
-@intro-color-1: #2eb4e8; 	//Blue color from the second intro block 
-@intro-color-2: #a6c63a; 	//Green color from the intro block/available class
-
 /*===================================
 =            LESS MIXINS            =
 ===================================*/
@@ -181,6 +164,22 @@ select {
 
 /*-----  End of LESS MIXINS  ------*/
 
+/**
+*
+* LESS VARIABLES
+*
+**/
+@link-color: #4599C8;
+@dark-color: #2b3039;
+@border: #DCDBDB;	//Border color 
+@border-color: #D7D7D7;
+@bevel-color: #FAFAFA;
+@light-text-color: #c9c9c9;
+@text-color: #5b5b5b;
+@heading-font: "Bree Serif", Arial, sans-serif;
+@serif-font: Georgia, serif;
+@body-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 /*=========================================
 =            UI ELEMENT STYLES            =
 =========================================*/
@@ -195,7 +194,7 @@ select {
 	background-image: linear-gradient(left, white 0%, @border 50%, white 100%);
 
 	border: none;
-	height: 1px;
+	height: 2px;
 	margin: 1.5em auto;
 	width: 50%;
 
@@ -211,6 +210,107 @@ select {
 		width: 120px;
 	}
 }
+
+/**
+*
+* GENERAL
+*
+**/
+body {
+	font: 14px/21px @body-font;
+	color: @text-color;
+	background: transparent url('images/main-bg.jpg') 0 0;
+}
+
+p, ul, ol {
+	margin-bottom: 1em;
+	// margin-top: 1em;
+}
+
+p a {
+	color: @link-color;
+	font-weight: bold;
+}
+
+hr {
+	border: none;
+	height: 1px;
+	border-top: 1px solid lighten(@border-color, 5%);
+	margin: 0;
+}
+
+/*==============================
+=            HEADER            =
+==============================*/
+
+.main-header {
+	background: white;
+	border-bottom: 1px solid @border-color;
+	box-shadow: inset 0px -5px 0px @bevel-color, 0px 0px 5px @border-color;
+	margin-bottom: 3em;
+}
+
+.top-menu-container {
+	background: @dark-color;
+	margin-bottom: 1.5em;
+
+	.top-menu-navigation ul {
+		margin-top: -1em;	
+
+	 > li {
+			float: left;
+		}
+
+		a {
+			color: @light-text-color;
+			text-decoration: none;
+			display: inline;
+			font-size: 14px;
+			height: 42px;
+			line-height: 42px;
+			margin-right: 1em;
+			position: relative;
+			padding-right: 1em;
+
+			&:hover {
+				color: orange;
+			}
+
+			&::before {
+				content: '|';
+				position: absolute;
+				font-size: 12px;
+				right: 0;
+				top: -15px;
+				color: darken(@light-text-color, 30%)
+			}
+		}
+
+		ul {
+			display: none;
+		}
+	}
+}
+
+.logo-container {
+	padding-bottom: 1.5em;
+}
+
+.ad-block {
+	.box-shadow(0px, 0px, 5px, @border-color);
+
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.top-ad {
+	margin-bottom: 3px;
+}
+
+	
 
 
 
