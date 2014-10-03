@@ -263,7 +263,9 @@ h1 {
 .main-header {
 	background: white;
 	border-bottom: 1px solid @border-color;
-	box-shadow: inset 0px -5px 0px @bevel-color, 0px 0px 5px @border-color;
+	// box-shadow: inset 0px -5px 0px @bevel-color, 0px 0px 5px @border-color;
+	.inner-shadow();
+
 	margin-bottom: 1em;
 }
 
@@ -428,7 +430,7 @@ h1 {
 			filter: alpha(opacity=0);
 			visibility: hidden;
 
-			.transition(opacity, .5s);
+			.transition(all, .3s);
 
 			li {
 				float: none;
@@ -453,7 +455,7 @@ h1 {
 					filter: alpha(opacity=0);
 					visibility: hidden;
 
-					.transition(opacity, 1s);
+					.transition(all, .3s);
 				}
 
 			}
@@ -486,7 +488,7 @@ h1 {
 
 	background: white;
 	// border: 1px solid @border-color;
-	box-shadow: inset 3px 0px 3px grey, 0px 0px 15px @dark-color;
+	box-shadow: inset 1px 0px 1px grey, 0px 0px 15px @dark-color;
 
 
 	article {
@@ -692,6 +694,12 @@ h1 {
 	li {
 		float: left;
 		margin: 0px 10px 10px 10px;
+		opacity: 1;
+		.transition(all, .3s);
+
+		&:hover {
+			opacity: .6;
+		}
 	}
 
 	.digg {
@@ -778,6 +786,12 @@ form {
 	.footer-sidebar-widget {
 
 		font-size: 12px;
+		h4 {
+			font-size: 1.5em;
+			font-weight: bold;
+			font-variant: small-caps;
+			padding-bottom: .5em;
+		}
 
 		ul {
 			li {
@@ -815,7 +829,17 @@ form {
 	}
 }
 
+.copyright-container {
+	// background: @bevel-color;
+	border-top: 1px solid @border-color;
+	padding-top: 1.5em;
+	font-size: 14px;
+	font-weight: bold;
 
+	.top-link-footer {
+		float: right;
+	}
+}
 
 
 
