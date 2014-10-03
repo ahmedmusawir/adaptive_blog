@@ -250,11 +250,40 @@ hr {
 
 h1, h2, h3, h4, h5 {
 	color: @dark-color;
+	line-height: 1.5em;
+	margin-bottom: 1.5em;
 }
 
 h1 {
 	font-size: 32px;
 	font-family: @heading-font;
+}
+
+h2 {
+	font-size: 26px;
+	font-family: @heading-font;
+}
+
+h3 {
+	font-size: 21px;
+	font-family: @heading-font;
+}
+
+h4 {
+	font-size: 16px;
+	font-family: @heading-font;
+	line-height: 42px;
+	height: 42px;
+}
+
+h5 {
+	font-size: 14px;
+	font-family: @heading-font;
+}
+
+h6 {
+	color: @light-text-color;
+	font-size: 12px;
 }
 
 /*==============================
@@ -399,6 +428,9 @@ h1 {
 		
 
 		a {
+			.transition(all, .3s);
+
+			font-size: .99em;
 			color: @dark-color;
 			// text-decoration: none;
 			font-weight: bold;
@@ -442,7 +474,8 @@ h1 {
 
 				a {
 					font-weight: normal;
-					.transition(all, .3s);
+					font-size: 1em;
+					.transition(all, .2s);
 
 					&::before {
 						content: '';
@@ -473,6 +506,7 @@ h1 {
 		&:hover > a {
 			color: #428bca;
 			font-weight: bold;
+			font-size: .96em;
 		}
 	}
 }
@@ -634,6 +668,12 @@ h1 {
 			float: right;
 		}
 	}
+
+	.article-full-image img {
+		border: 4px solid @border-color;
+		.box-shadow(5px, 5px, 18px, gray);
+		margin-bottom: 2em;
+	}
 	
 
 } //end .articles class 
@@ -649,10 +689,10 @@ h1 {
 	padding-bottom: 1.5em;
 
 	h4 {
-		font-size: 1.2em;
+		font-size: 1.4em;
 		font-weight: bold;
 		font-variant: small-caps;
-		padding-bottom: .5em;
+		margin-bottom: .5em;
 	}
 
 	ul {

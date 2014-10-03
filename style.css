@@ -248,10 +248,34 @@ h3,
 h4,
 h5 {
   color: #2b3039;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
 }
 h1 {
   font-size: 32px;
   font-family: "Bree Serif", Arial, sans-serif;
+}
+h2 {
+  font-size: 26px;
+  font-family: "Bree Serif", Arial, sans-serif;
+}
+h3 {
+  font-size: 21px;
+  font-family: "Bree Serif", Arial, sans-serif;
+}
+h4 {
+  font-size: 16px;
+  font-family: "Bree Serif", Arial, sans-serif;
+  line-height: 42px;
+  height: 42px;
+}
+h5 {
+  font-size: 14px;
+  font-family: "Bree Serif", Arial, sans-serif;
+}
+h6 {
+  color: #c9c9c9;
+  font-size: 12px;
 }
 /*==============================
 =            HEADER            =
@@ -365,6 +389,12 @@ h1 {
   z-index: 999;
 }
 .main-navigation ul > li a {
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  font-size: .99em;
   color: #2b3039;
   font-weight: bold;
   height: 6em;
@@ -405,11 +435,12 @@ h1 {
 }
 .main-navigation ul > li ul li a {
   font-weight: normal;
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  font-size: 1em;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .main-navigation ul > li ul li a::before {
   content: '';
@@ -434,6 +465,7 @@ h1 {
 .main-navigation ul > li:hover > a {
   color: #428bca;
   font-weight: bold;
+  font-size: .96em;
 }
 /*====================================
 =            MAIN CONTENT            =
@@ -562,6 +594,12 @@ h1 {
 .articles .articles-nav .articles-nav-next {
   float: right;
 }
+.articles .article-full-image img {
+  border: 4px solid #d7d7d7;
+  -webkit-box-shadow: 5px 5px 18px #808080;
+  box-shadow: 5px 5px 18px #808080;
+  margin-bottom: 2em;
+}
 /*===============================
 =            SIDEBAR            =
 ===============================*/
@@ -571,10 +609,10 @@ h1 {
   padding-bottom: 1.5em;
 }
 .sidebar-widget h4 {
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: bold;
   font-variant: small-caps;
-  padding-bottom: .5em;
+  margin-bottom: .5em;
 }
 .sidebar-widget ul li ul {
   margin-left: 2em;
