@@ -560,6 +560,39 @@ h1 {
   margin-bottom: 1.5em;
   padding-bottom: 1.5em;
 }
+.sidebar-widget h4 {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-variant: small-caps;
+  padding-bottom: .5em;
+}
+.sidebar-widget ul li ul {
+  margin-left: 2em;
+  margin-bottom: 0;
+}
+.sidebar-widget ul li ul li {
+  position: relative;
+  padding-left: 1em;
+}
+.sidebar-widget ul li ul li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+}
+.sidebar-widget ul li a {
+  color: #000000;
+  font-weight: bold;
+  font-size: 1em;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.sidebar-widget ul li a:hover {
+  color: yellow;
+  font-size: 1.1em;
+}
 .social-icons {
   margin-bottom: 3em;
 }
@@ -596,7 +629,7 @@ h1 {
 }
 .ad-260 li {
   width: 260px;
-  margin: 0 5px 20px 5px;
+  margin: 0 auto;
 }
 /*=============================
 =            FORMS            =
@@ -614,4 +647,48 @@ form input[type="url"] {
 #search-form input[type="text"] {
   background: #ffffff url('images/icons/search-icon.png') 1em center no-repeat;
   padding: 1em 1em 1em 3em;
+}
+/*==============================
+=            FOOTER            =
+==============================*/
+.footer-widget-area {
+  background: white;
+  border-top: 1px solid #d7d7d7;
+  -webkit-box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);
+  -o-box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);
+  -ms-box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);
+  padding: 3em 0;
+  margin-top: 3em;
+}
+.footer-widget-area .footer-sidebar-widget {
+  font-size: 12px;
+}
+.footer-widget-area .footer-sidebar-widget ul li ul {
+  margin-left: 2em;
+  margin-bottom: 0;
+}
+.footer-widget-area .footer-sidebar-widget ul li ul li {
+  position: relative;
+  padding-left: 1em;
+}
+.footer-widget-area .footer-sidebar-widget ul li ul li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+}
+.footer-widget-area .footer-sidebar-widget ul li a {
+  color: #4599c8;
+  font-weight: bold;
+  font-size: 1em;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.footer-widget-area .footer-sidebar-widget ul li a:hover {
+  color: #2b3039;
+  font-size: 1.1em;
 }
