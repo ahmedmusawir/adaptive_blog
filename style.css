@@ -338,10 +338,6 @@ h1 {
 .logo-container {
   padding-bottom: 1.5em;
 }
-.ad-block {
-  -webkit-box-shadow: 0px 0px 5px #d7d7d7;
-  box-shadow: 0px 0px 5px #d7d7d7;
-}
 .ad-block img {
   display: block;
   width: 100%;
@@ -555,4 +551,67 @@ h1 {
 }
 .articles .articles-nav .articles-nav-next {
   float: right;
+}
+/*===============================
+=            SIDEBAR            =
+===============================*/
+.sidebar-widget {
+  border-bottom: 1px solid #d7d7d7;
+  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
+}
+.social-icons {
+  margin-bottom: 3em;
+}
+.social-icons li {
+  float: left;
+  margin: 0px 10px 10px 10px;
+}
+.social-icons .digg {
+  background: transparent url('images/icons/digg.png') center center no-repeat;
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+.social-icons .facebook {
+  background: transparent url('images/icons/facebook.png') center center no-repeat;
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+.social-icons .twitter {
+  background: transparent url('images/icons/twitter.png') center center no-repeat;
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+.social-icons .dribble {
+  background: transparent url('images/icons/dribble.png') center center no-repeat;
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+.ad-block {
+  margin-bottom: 1em;
+}
+.ad-260 li {
+  width: 260px;
+  margin: 0 5px 20px 5px;
+}
+/*=============================
+=            FORMS            =
+=============================*/
+form input[type="text"],
+form input[type="email"],
+form input[type="url"] {
+  border: 1px solid #d7d7d7;
+  height: 42px;
+  -webkit-box-shadow: 0px 0px 5px #d7d7d7;
+  box-shadow: 0px 0px 5px #d7d7d7;
+  padding: 1em;
+  width: 100%;
+}
+#search-form input[type="text"] {
+  background: #ffffff url('images/icons/search-icon.png') 1em center no-repeat;
+  padding: 1em 1em 1em 3em;
 }
