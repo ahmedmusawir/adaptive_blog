@@ -532,7 +532,7 @@ h1 {
 
 		.article-meta-comments {
 			float: right;
-			background: transparent url('images/comments-base-out.png') center center no-repeat;
+			background: transparent url('images/icons/comments-base-out.png') center center no-repeat;
 			width: 70px;
 			height: 70px;
 			color: white;
@@ -541,7 +541,7 @@ h1 {
 			margin-top: 42px;
 
 			&:hover {
-				background: transparent url('images/comments-base-over.png') center center no-repeat;
+				background: transparent url('images/icons/comments-base-over.png') center center no-repeat;
 
 			}
 
@@ -602,13 +602,32 @@ h1 {
 		padding: 3em;
 
 		p {
-			font-size: 21px;
+			font-size: 18px;
 			color: @dark-color;
 		}
 
 		span {
 			margin-top: 1.5em;
 			display: block;
+
+			a {
+				font-size: 1.5em;
+			}
+		}
+	}
+
+	.articles-nav {
+		padding: 2em 3em 1em;
+		// margin-top: -1.5em;
+		.box-shadow(0px, 0px, 5px, @border-color);
+
+
+		.articles-nav-prev {
+			float: left;
+		}
+
+		.articles-nav-next {
+			float: right;
 		}
 	}
 	
