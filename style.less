@@ -80,6 +80,9 @@ select {
 .align-right {
 	text-align: right;
 }
+.cb {
+	clear: both;
+}
 
 .inline {
 	li {
@@ -123,14 +126,14 @@ select {
 
 }
 
-.gradiant (@from, @to) {
+.gradient (@from, @to) {
 	background-color: @from;
-	background-image: -webkit-gradiant(linear, left top, left bottom, from(@from), to(@to));
-	background-image: -webkit-linear-gradiant(top, @from, @to);
-	background-image: -o-linear-gradiant(top, @from, @to);
-	background-image: -moz-linear-gradiant(top, @from, @to);
-	background-image: -ms-linear-gradiant(top, @from, @to);
-	background-image: linear-gradiant(top, @from, @to);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+	background-image: -webkit-linear-gradient(top, @from, @to);
+	background-image: -o-linear-gradient(top, @from, @to);
+	background-image: -moz-linear-gradient(top, @from, @to);
+	background-image: -ms-linear-gradient(top, @from, @to);
+	background-image: linear-gradient(top, @from, @to);
 }
 
 .box-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
@@ -171,6 +174,7 @@ select {
 **/
 @link-color: #4599C8;
 @dark-color: #2b3039;
+@gray-color: #f1f1f1;
 @border: #DCDBDB;	//Border color 
 @border-color: #D7D7D7;
 @bevel-color: #FAFAFA;
@@ -285,6 +289,114 @@ h6 {
 	color: @light-text-color;
 	font-size: 12px;
 }
+
+blockquote {
+	font: italic 17px/1.8em @serif-font;
+	color: @light-text-color;
+	border-left: 4px solid @border-color;
+	padding-left: 2em;
+	margin: 2em 3em;
+
+	cite {
+		display: block;
+		font-size: 12px;
+		font-style: italic;
+		margin-top: 1.5em;
+		color: @text-color;
+		font-family: @body-font;
+	}
+}
+
+
+
+.aligncenter, .alignleft, .alignright, .alignnone {
+	padding: 3px;
+	background: white;
+	border: 1px solid @border-color;
+	.box-shadow(0px, 0px, 5px, @border-color);
+	margin: 1.5em 0;
+
+	+ p {
+		margin-top: 2.1em;
+	}
+}
+
+.aligncenter, img.centered {
+	display: block;
+	margin: 1.5em auto;
+}
+
+.alignleft {
+	float: left;
+	margin: 1.5em 2em 1.5em 0;
+}
+
+.alignright {
+	float: right;
+	margin: 1.5em 0 1.5em 2em;
+}
+
+.wp-caption {
+	text-align: center;
+
+	.wp-caption-text {
+		margin-bottom: 0;
+		font-style: 12px;
+		font-style: italic;
+		line-height: 34px;
+	}
+}
+
+.video-container + p {
+	margin-top: 1.5em;
+}
+
+/*===============================
+=            BUTTONS            =
+===============================*/
+
+.button {
+	display: inline-block;
+	.round();
+	color: white;
+	font-weight: normal;
+	padding: 0 1em;
+	height: 3em;
+	line-height: 3em;
+}
+
+.small-button {
+	display: inline-block;
+	.round();
+	color: white;
+	font-weight: normal;
+	padding: 1.2em 1em;
+	height: 1.5em;
+	line-height: .3em;
+	font-size: 12px;
+}
+
+.blue {
+	// .gradient(black, red);
+	.gradient(@link-color, darken(@link-color, 20%));
+
+	&:hover {
+		.gradient(darken(@link-color, 10%), @link-color);
+		color: white;
+	}
+}
+
+.gray {
+	.gradient(darken(@gray-color, 30%), darken(@gray-color, 55%));
+
+	&:hover {
+		.gradient(darken(@gray-color, 55%), darken(@gray-color, 30%));
+		color: @gray-color;
+	}
+}
+
+
+
 
 /*==============================
 =            HEADER            =
@@ -543,6 +655,11 @@ h6 {
 			}
 		}
 
+		header h1 {
+			margin-bottom: 0;
+			line-height: 21px;
+		}
+
 		h1 a {
 			color: lighten(@dark-color, 30%);
 
@@ -673,6 +790,10 @@ h6 {
 		border: 4px solid @border-color;
 		.box-shadow(5px, 5px, 18px, gray);
 		margin-bottom: 2em;
+	}
+
+	hr {
+		margin: 3em 0;
 	}
 	
 
@@ -833,6 +954,7 @@ form {
 			font-weight: bold;
 			font-variant: small-caps;
 			padding-bottom: .5em;
+			margin-bottom: 1em;
 		}
 
 		ul {
