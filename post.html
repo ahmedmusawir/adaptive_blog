@@ -11,9 +11,11 @@
 
 	<!-- Bootstrap CSS -->
 	<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"> -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<!-- Stylesheets -->
 	<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<!-- <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic' rel='stylesheet' type='text/css'> -->
 
@@ -60,6 +62,10 @@
 
 				</nav>
 
+			<a href="#" class="small-button blue" id="rwd-top-nav-btn">Select a page ...</a>
+			<div class="rwd-top-nav">
+			</div> <!-- end rwd-top-nav -->	
+
 			</div>
 			<!-- end container -->
 		</div>
@@ -67,7 +73,7 @@
 
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 logo-container">
+				<div class="col-md-6 col-sm-6 logo-container">
 					<h1 class="logo">
 						<a href="">
 							<!-- <img src="http://lorempixel.com/300/100/abstract" alt="Ad"> -->
@@ -77,9 +83,9 @@
 				</div>
 				<!-- end col-md-3 -->
 
-				<div class="col-md-6 clearfix">
+				<div class="col-md-6 col-sm-6 clearfix">
 					
-					<figure class="ad-block align-right">
+					<figure class="ad-block align-right top-ad">
 						<a href="">
 							<img src="images/top-ad-block.jpg" alt="Ad">
 						</a>
@@ -115,6 +121,10 @@
 			</nav>
 			<!-- end main-navigation -->
 
+			<a href="#" class="button blue" id="rwd-main-nav-btn">Select a page ...</a>
+			<div class="rwd-main-nav">
+			</div> <!-- end rwd-top-nav -->
+
 		</div>
 		<!-- end container -->
 
@@ -128,7 +138,7 @@
 	
 		<div class="row">
 	
-			<div class="col-md-9">
+			<div class="col-md-9 article-container-fix">
 
 				<div class="articles">
 					<article class="clearfix">
@@ -175,10 +185,10 @@
 						
 
 							<h2>Image Classes</h2>
-							<img src="images/single-post-img-1.jpg" alt="" class="aligncenter" />
+							<img src="images/single-post-img-1.jpg" alt="" class="aligncenter img-responsive" />
 							<p>This is a center aligned image, no caption.</p>
 
-							<img src="images/single-post-img-2.jpg" alt="" class="alignleft" />
+							<img src="images/single-post-img-2.jpg" alt="" class="alignleft img-responsive" />
 							<p>This is a left aligned image, no caption. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt voluptate expedita quaerat nostrum odio perferendis fugiat ipsa omnis, quisquam.</p>
 
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quia in, dolore enim expedita nam voluptatibus culpa quo nisi inventore qui ipsa asperiores magni repellat quidem cum reiciendis accusantium, laudantium ullam modi odio soluta! Omnis neque distinctio iure eveniet assumenda, saepe deserunt. Enim necessitatibus ex ullam blanditiis totam, ratione veritatis.</p>
@@ -187,7 +197,7 @@
 
 							<br class="cb" />
 
-							<img src="images/single-post-img-3.jpg" alt="" class="alignright" />
+							<img src="images/single-post-img-3.jpg" alt="" class="alignright img-responsive" />
 							<p>This is a right aligned image, no caption. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt voluptate expedita quaerat nostrum odio perferendis fugiat ipsa omnis, quisquam.</p>
 
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci perferendis commodi, deleniti consequatur error illo, at vero pariatur, atque inventore sapiente incidunt eos id quas quasi doloremque ad dolores ipsum deserunt, excepturi. Quis obcaecati eum in doloremque necessitatibus laborum minus temporibus, vero aspernatur explicabo minima at, repudiandae vel enim velit?</p>
@@ -195,7 +205,7 @@
 							<br class="cb" />
 
 
-							<img src="images/single-post-img-4.jpg" alt="" class="alignnone" />
+							<img src="images/single-post-img-4.jpg" alt="" class="alignnone img-responsive" />
 							<p>This is a none aligned image, no caption. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt voluptate expedita quaerat nostrum odio perferendis fugiat ipsa omnis, quisquam.</p>
 
 						<hr />
@@ -203,13 +213,13 @@
 						<h2>Image with captions</h2>
 
 						<div class="wp-caption aligncenter">
-							<img src="images/single-post-img-5.jpg" alt="Dummy Image">
+							<img class="img-responsive" src="images/single-post-img-5.jpg" alt="Dummy Image">
 							<p class="wp-caption-text">This is a caption with<a href="#"> a link</a></p>
 						</div>
 						<p>This is a center aligned image, with caption. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt voluptate expedita quaerat nostrum odio perferendis fugiat ipsa omnis, quisquam.</p>
 
 						<div class="wp-caption alignleft">
-							<img src="images/single-post-img-6.jpg" alt="Dummy Image">
+							<img class="img-responsive" src="images/single-post-img-6.jpg" alt="Dummy Image">
 							<p class="wp-caption-text">This is a caption with<a href="#"> a link</a></p>
 						</div>
 						<p>This is a left aligned image, with caption. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt voluptate expedita quaerat nostrum odio perferendis fugiat ipsa omnis, quisquam.</p>
@@ -221,7 +231,7 @@
 
 
 						<div class="wp-caption alignright">
-							<img src="images/single-post-img-7.jpg" alt="Dummy Image">
+							<img class="img-responsive" src="images/single-post-img-7.jpg" alt="Dummy Image">
 							<p class="wp-caption-text">This is a caption with<a href="#"> a link</a></p>
 						</div>
 						<p>This is a right aligned image, with caption. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt voluptate expedita quaerat nostrum odio perferendis fugiat ipsa omnis, quisquam.</p>
@@ -233,7 +243,7 @@
 
 
 						<div class="wp-caption alignnone">
-							<img src="images/single-post-img-8.jpg" alt="Dummy Image">
+							<img class="img-responsive" src="images/single-post-img-8.jpg" alt="Dummy Image">
 							<p class="wp-caption-text">This is a caption with<a href="#"> a link</a></p>
 						</div>
 						<p>This is a none aligned image, with caption. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt voluptate expedita quaerat nostrum odio perferendis fugiat ipsa omnis, quisquam.</p>
@@ -243,8 +253,10 @@
 
 						<h2>This is a video container</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, natus.</p>
-						<div class="video-container">
-							<iframe width="560" height="315" src="http://www.youtube.com/embed/3Rxuu_4XpEM" frameborder="0" allowfullscreen></iframe>
+
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe class="embed-responsive-item" src="//www.youtube.com/embed/D8wiudhAhaA" allowfullscreen></iframe>
+							<!-- <iframe class="embed-responsive-item" width="560" height="315" src="http://www.youtube.com/embed/3Rxuu_4XpEM" frameborder="0" allowfullscreen></iframe> -->
 						</div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium aspernatur dolor, vel culpa eaque repellat, sequi recusandae quod error et at quasi quaerat. Iure vitae saepe, porro accusantium similique voluptatibus!</p>
 						<!-- end video container -->
@@ -427,16 +439,16 @@
 
 					<ul class="ad-125">
 						<li>
-							<figure class="ad-block"><a href="" ><img src="images/ad-block-1.jpg" alt=""></a></figure>
+							<figure class="ad-block"><a href="" ><img class="img-responsive" src="images/ad-block-1.jpg" alt=""></a></figure>
 						</li>
 						<li>
-							<figure class="ad-block"><a href="" ><img src="images/ad-block-2.jpg" alt=""></a></figure>
+							<figure class="ad-block"><a href="" ><img class="img-responsive" src="images/ad-block-2.jpg" alt=""></a></figure>
 						</li>
 						<li>
-							<figure class="ad-block"><a href="" ><img src="images/ad-block-2.jpg" alt=""></a></figure>
+							<figure class="ad-block"><a href="" ><img class="img-responsive" src="images/ad-block-2.jpg" alt=""></a></figure>
 						</li>
 						<li>
-							<figure class="ad-block"><a href="" ><img src="images/ad-block-1.jpg" alt=""></a></figure>
+							<figure class="ad-block"><a href="" ><img class="img-responsive" src="images/ad-block-1.jpg" alt=""></a></figure>
 						</li>
 					</ul>
 
@@ -537,7 +549,7 @@
 							<h4>Connect With Us</h4>
 							<p>Click the icons below to get in touch or follow us on our social networks.</p>
 
-							<ul class="social-icons">
+							<ul class="social-icons clearfix">
 								<li><a href="" class="digg"></a></li>
 								<li><a href="" class="facebook"></a></li>
 								<li><a href="" class="twitter"></a></li>
@@ -580,6 +592,7 @@
 
 <!-- JavaScript -->
 <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
 </html>

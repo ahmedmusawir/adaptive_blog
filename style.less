@@ -245,12 +245,6 @@ p a {
 	.transition();
 }
 
-a:hover, a:focus {
-	color: white;
-	text-decoration: none;
-	outline: 0;
-}
-
 hr {
 	border: none;
 	height: 1px;
@@ -261,7 +255,6 @@ hr {
 h1, h2, h3, h4, h5 {
 	color: @dark-color;
 	line-height: 1.5em;
-	// margin-bottom: 1em;
 }
 
 h1 {
@@ -299,7 +292,6 @@ h6 {
 blockquote {
 	font: italic 17px/1.8em @serif-font;
 	color: @light-text-color;
-	border-left: 4px solid @border-color;
 	padding-left: 2em;
 	margin: 2em 3em;
 
@@ -430,6 +422,7 @@ blockquote {
 			position: absolute;
 			left: -3em;
 			top: 2.5em;
+			z-index: 700;
 		}
 	}
 
@@ -533,7 +526,7 @@ blockquote {
 	font-weight: normal;
 	padding: 1.2em 1em;
 	height: 1.5em;
-	line-height: .3em;
+	line-height: .1em;
 	font-size: 12px;
 }
 
@@ -577,7 +570,6 @@ blockquote {
 	margin-bottom: 1.5em;
 
 	.top-menu-navigation ul {
-		// margin-top: -1em;	
 		z-index: 1000;
 
 	 > li {
@@ -868,8 +860,8 @@ blockquote {
 			margin-right: 2em;
 
 			img {
-				border: 1px solid @border-color;
-				.box-shadow(5px, 5px, 6px, @border-color);
+				// border: 1px solid @border-color;
+				// .box-shadow(5px, 5px, 6px, @border-color);
 			}
 		}
 	} 
@@ -894,6 +886,9 @@ blockquote {
 			font: 21px @serif-font;
 			color: @dark-color;
 			font-style: italic;
+			background: transparent;
+			padding: 0;
+			margin: 0;
 		}
 
 		cite {
@@ -1275,6 +1270,12 @@ form {
 	#rwd-top-nav-btn, #rwd-main-nav-btn {
 		display: inline-block;
 		margin: 1em 0;
+
+		&:hover, &:focus {
+			color: white;
+			text-decoration: none;
+			outline: 0;
+		}
 	}
 
 }
@@ -1282,16 +1283,153 @@ form {
 /*==========  All Mobile Sizes (devices and browser)  ==========*/
 @media only screen and (max-width: 767px) {
 
+	.main-sidebar, .top-menu-navigation, .main-navigation, .top-ad {
+		display: none;
+	}
+
+	.article-container-fix {
+		width: 100%;
+		color: dodgerblue;
+	}
+
+	#rwd-top-nav-btn, #rwd-main-nav-btn {
+		display: inline-block;
+		margin: 1em 0;
+
+		&:hover, &:focus {
+			color: white;
+			text-decoration: none;
+			outline: 0;
+		}
+		
+	}
+
+	.col-xs-12 {
+		padding-left: 0;
+	}
+
+	.container {
+		padding: 0 3em;
+	}
+
+	#comment-form input[type="text"], 
+	#comment-form input[type="url"], 
+	#comment-form input[type="email"] {
+		width: 100%;
+		margin-right: 1em;
+	}
+
 }
 
 /*==========  Mobile Landscpe Size to Tablet Portrait (devices and browsers)  ==========*/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+
+
 
 }
 
 /*==========  Mobile Portrait Size to Mobile Landscape Size (devices and browsers)  ==========*/
 @media only screen and (max-width: 479px) {
 
+	.articles article h1 a {
+		font-size: 1em;
+		line-height: 1em;
+	}
+
+	.articles article header h1 {
+		margin-bottom: 0;
+		line-height: 1em;
+	}
+
+	.article-meta-extra {
+		display: block;
+		margin-top: 1em;
+	}
+
+	.articles article .article-meta-extra a {
+	    font-weight: normal;
+	    // border: 1px solid red;
+	    margin-top: -2em;
+	    display: block;
+	    // padding-top: -2em;
+	}
+
+	blockquote {
+		margin: 0;
+	}
+	
+	.articles .quote-container {
+		margin-top: 2em;
+		blockquote {
+			font-size: 1em;
+		}
+	}
+
+	.articles article .article-preview-image {
+	    float: none;
+	    margin-bottom: 1em;
+	}
+
+	.articles .url-container {
+		margin-top: 2em;
+
+		span a {
+			font-size: 1em;
+			text-align: center;
+			word-break: break-all;
+			color: red;
+		}
+	}
+
+	#comment-form input[type="text"], 
+	#comment-form input[type="url"], 
+	#comment-form input[type="email"] {
+		width: 100%;
+		margin-right: 1em;
+	}
+
+	.aligncenter, img.centered {
+		display: block;
+		margin: 1.5em auto;
+	}
+
+	.alignleft {
+		margin: 1.5em auto;
+		float: none;
+	}
+
+	.alignright {
+		margin: 1.5em auto;
+		float: none;
+	}
+
+	.comment-avatar img {
+		float: none;
+		clear: both;
+		margin: 0 1.5em 0 1em;
+	}
+
+	.commentslist header::before {
+		font-size: 28px;
+	}
+
+	.commentslist header p {
+		margin-top: 1em;
+	}
+
+	.commentslist li ol li, li ul li {
+		position: relative;
+
+		article {
+			width: 120%;
+			margin-left: -2em;
+			z-index: 800;
+		}
+
+	}
+
+
+	
 }
 
 
