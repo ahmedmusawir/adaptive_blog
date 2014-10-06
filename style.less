@@ -245,6 +245,12 @@ p a {
 	.transition();
 }
 
+a:hover, a:focus {
+	color: white;
+	text-decoration: none;
+	outline: 0;
+}
+
 hr {
 	border: none;
 	height: 1px;
@@ -1191,12 +1197,40 @@ form {
 	}
 }
 
-/*==========  Responsive Stuff  ==========*/
+/*==========  RESPONSIVE STUFF  ==========*/
+
 #rwd-top-nav-btn, #rwd-main-nav-btn,
 .rwd-top-nav, .rwd-main-nav {
 	display: none;
 }
 
+.rwd-top-nav {
+	li {
+		margin-bottom: 1em;
+
+		a {
+			color: white;
+		}
+
+		ul {
+			margin: 1em 0 0 2em;
+		}
+	}
+}
+
+.rwd-main-nav {
+	li {
+		margin-bottom: 1em;
+
+		a {
+			color: @link-color;
+		}
+
+		ul {
+			margin: 1em 0 0 2em;
+		}
+	}
+}
 /*=====================================
 =            MEDIA QUERIES            =
 =====================================*/

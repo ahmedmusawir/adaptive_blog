@@ -239,6 +239,12 @@ p a {
   -ms-transition: color 0.2s ease-out;
   transition: color 0.2s ease-out;
 }
+a:hover,
+a:focus {
+  color: white;
+  text-decoration: none;
+  outline: 0;
+}
 hr {
   border: none;
   height: 1px;
@@ -1127,12 +1133,30 @@ form input[type="submit"]:hover {
 .copyright-container .top-link-footer {
   float: right;
 }
-/*==========  Responsive Stuff  ==========*/
+/*==========  RESPONSIVE STUFF  ==========*/
 #rwd-top-nav-btn,
 #rwd-main-nav-btn,
 .rwd-top-nav,
 .rwd-main-nav {
   display: none;
+}
+.rwd-top-nav li {
+  margin-bottom: 1em;
+}
+.rwd-top-nav li a {
+  color: white;
+}
+.rwd-top-nav li ul {
+  margin: 1em 0 0 2em;
+}
+.rwd-main-nav li {
+  margin-bottom: 1em;
+}
+.rwd-main-nav li a {
+  color: #4599c8;
+}
+.rwd-main-nav li ul {
+  margin: 1em 0 0 2em;
 }
 /*=====================================
 =            MEDIA QUERIES            =
