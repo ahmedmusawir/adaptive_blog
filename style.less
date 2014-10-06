@@ -255,7 +255,7 @@ hr {
 h1, h2, h3, h4, h5 {
 	color: @dark-color;
 	line-height: 1.5em;
-	margin-bottom: 1.5em;
+	// margin-bottom: 1em;
 }
 
 h1 {
@@ -666,7 +666,7 @@ blockquote {
 }
 
 .logo-container {
-	padding-bottom: 1.5em;
+	// padding-bottom: 1.5em;
 }
 
 .ad-block {
@@ -757,7 +757,7 @@ blockquote {
 					filter: alpha(opacity=0);
 					visibility: hidden;
 
-					.transition(all, .3s);
+					.transition(all, .2s);
 				}
 
 			}
@@ -772,7 +772,7 @@ blockquote {
 
 		&:hover > a {
 			color: #428bca;
-			font-weight: bold;
+			// font-weight: bold;
 			font-size: .96em;
 		}
 	}
@@ -948,7 +948,8 @@ blockquote {
 	}
 
 	hr {
-		margin: 3em 0;
+		margin-top: 3em;
+		margin-bottom: 3em;
 	}
 	
 
@@ -1050,12 +1051,13 @@ blockquote {
 }
 
 .ad-125 {
+	li {
+		width: 125px;
+		margin: 0 auto;
+		display: inline-block;
+	}
 
 }
-
-.ad-block {
-	margin-bottom: 1em;
-} 
 
 .ad-260 {
 	li {
@@ -1063,6 +1065,10 @@ blockquote {
 		margin: 0 auto;
 	}
 }
+
+.ad-block {
+	margin-bottom: 1em;
+} 
 
 /*=============================
 =            FORMS            =
@@ -1127,12 +1133,14 @@ form {
 	.footer-sidebar-widget {
 
 		font-size: 12px;
+		margin-bottom: 1em;
+
 		h4 {
 			font-size: 1.5em;
 			font-weight: bold;
 			font-variant: small-caps;
 			padding-bottom: .5em;
-			margin-bottom: 1em;
+			margin-bottom: .5em;
 		}
 
 		ul {
@@ -1183,57 +1191,63 @@ form {
 	}
 }
 
+/*=====================================
+=            MEDIA QUERIES            =
+=====================================*/
 
 
+/*==========  Smaller than 1200 (devices and browsers)  ==========*/
+@media only screen and (max-width: 1199px) {
+	.main-sidebar {
+		width: 270px;
+		margin-left: 30px;
+	}
 
+	.article-container-fix {
+		width: 640px;
+	}
 
+	.col-md-3 {
+		padding-left: 0px;
+	}
 
+}
 
+/*==========  Smaller than standard 960 (devices and browsers)  ==========*/
+@media only screen and (max-width: 959px) {
 
-	
+}
 
+/*==========  Tablet Portrait size to standard 960 (devices and browsers)  ==========*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.main-sidebar {
+		display: none;
+	}
 
+	.article-container-fix {
+		width: 724px;
+	}
 
+	.col-sm-12 {
+		padding-left: 0px;
+	}
 
+}
 
-	
+/*==========  All Mobile Sizes (devices and browser)  ==========*/
+@media only screen and (max-width: 767px) {
 
+}
 
+/*==========  Mobile Landscpe Size to Tablet Portrait (devices and browsers)  ==========*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
 
+}
 
+/*==========  Mobile Portrait Size to Mobile Landscape Size (devices and browsers)  ==========*/
+@media only screen and (max-width: 479px) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
