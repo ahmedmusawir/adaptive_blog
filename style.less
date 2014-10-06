@@ -1191,6 +1191,12 @@ form {
 	}
 }
 
+/*==========  Responsive Stuff  ==========*/
+#rwd-top-nav-btn, #rwd-main-nav-btn,
+.rwd-top-nav, .rwd-main-nav {
+	display: none;
+}
+
 /*=====================================
 =            MEDIA QUERIES            =
 =====================================*/
@@ -1220,7 +1226,7 @@ form {
 
 /*==========  Tablet Portrait size to standard 960 (devices and browsers)  ==========*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-	.main-sidebar {
+	.main-sidebar, .top-menu-navigation, .main-navigation {
 		display: none;
 	}
 
@@ -1230,6 +1236,11 @@ form {
 
 	.col-sm-12 {
 		padding-left: 0px;
+	}
+
+	#rwd-top-nav-btn, #rwd-main-nav-btn {
+		display: inline-block;
+		margin: 1em 0;
 	}
 
 }
